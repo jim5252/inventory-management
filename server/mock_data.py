@@ -35,5 +35,14 @@ recent_transactions = load_json_file('transactions.json')
 # Load purchase orders
 purchase_orders = load_json_file('purchase_orders.json')
 
+# Restocking orders placed via the Restocking tab. Created at runtime (not
+# loaded from a fixture file) since they represent user-submitted state for
+# this demo session; they reset on server restart along with everything else.
+restocking_orders = []
+
+# Tasks created via the profile menu's task list. Created at runtime for the
+# same reason as restocking_orders above.
+tasks = []
+
 # All data is now loaded from JSON files in the data/ directory
 # This allows for easier maintenance and updates of the sample data
